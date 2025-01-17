@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Header con logo y navegación */
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.logo {
+    align-self: flex-start; 
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.barra-horizontal {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin: 0;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 100%;
+}
+
+.navegacion li {
+    margin: 0 1rem;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.navegacion a:hover {
+    color: #007BFF;
+}
+
+.barra-horizontal-menu {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin-top: 0;
+}
+
+/* Estilos del contenedor principal */
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+/* Sección de texto */
+.texto {
+    width: 35%;
+}
+
+.entradas,
+.categorias {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem; /* Espacio entre las secciones */
+}
+
+.entradas h2,
+.categorias h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.entradas ul,
+.categorias ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.entradas li,
+.categorias li {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.entradas li:hover,
+.categorias li:hover {
+    color: #007BFF;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Rejilla de imágenes (CSS Grid) */
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 60%;
+}
+
+.imagen-columna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-contenedor {
+    position: relative;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.texto-imagen {
+    padding: 0.8rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    color: #333;
+    width: 100%;
+}
+
+.texto-imagen h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.texto-imagen p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .imagenes {
+        grid-template-columns: 1fr;
+    }
+}
